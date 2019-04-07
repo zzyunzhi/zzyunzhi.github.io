@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> RAM </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<a href="../../index.html"><i class="fa fa-home"></i> HOME</a>
+
+<h1 id="img transformer">Image Transformer</h1>
+
+<p style="text-align: center">Niki Parmar, Ashish Vaswani, Jakob Uszkoreit, Lukasz, Kaiser, Noam Shazeer, Alexander Ku, Dustin Tran. <a href="https://arxiv.org/pdf/1802.05751.pdf">Image Transformer</a>. 2018.</p> 
+
+<hr>
+
+<ul>
+<li>Image generation -> autoregressive sequence generation or transformation problem.</li>
+
+<li>Generalize self-attetion to a sequence modeling formulation of image generation with tractable likelihood.</li>
+
+<li>Likelihood is made tractable by modeling the joint distribution of the pixels in the image as the product of conditional distributions.</li>
+</ul>
+
+<h2 id="relatedwork">Related work</h2>
+
+<ul>
+<li>RNN/CNN: sequentially predicts each next pixel given all previously generated pixels.</li>
+
+<li>PixelCNN: parallelized, growing receptive field comes at cost in computational performance.</li>
+
+<li>GAN: generator trained in opposition to a discriminator network; unstable, mode collapse (generated images fail to reflect diversity in the training set).</li>
+
+<li>Self-attention: locally restricted form of multi-head self-attention ~ sparsely parameterized form of gated convolution.</li>
+</ul>
+
+<h2 id="architecture">Architecture</h2>
+
+<h3 id="imagerepresentation">Image Representation</h3>
+
+<ul>
+<li>Pixel intensity -> Discrete categories
+
+
+<ul>
+<li>encoding: color-channel-specific set of 256 d-dim embedding vectors.</li>
+
+<li>output intensities share the same embeddings across the channels</li>
+
+<li>image [w, h, 3] -> [w$\times$h$\times$3, c]</li></ul>
+</li>
+
+<li>Pixel intensity -> Ordinal values 
+
+
+<ul>
+<li>with 1$\times$3 strided convolution: [h, w, 3] -> [h, w, d]</li>
+
+<li>sine/cosine functions of coordinates -> d-dim encoding (d/2 ~ row index, d/2 ~ col index)</li></ul>
+</li>
+</ul>
+
+<h3 id="selfattention">Self-Attention</h3>
+
+<ul>
+<li>Encoder generates contextualized, per-pixel-channel representation of the source image.</li>
+
+<li>Decoder autoregressively outputs pixel intensities, one channel per pixel at each time step; consuming previously generated pixels and encoded input image.</li>
+</ul>
+
+<h3 id="localselfattention">Local Self-Attention</h3>
+
+<ul>
+<li>Restrict positions in the memory matrix M to a local neighborhood around the query position -> 1D/2D local attention. </li>
+
+<li>Partition the image into query blocks associated with large memory block. Self-attention is computed for all query blocks in parallel. </li>
+
+<li>Feed-forward networks and layer normalizations are parallelized for all positions.</li>
+</ul>
+
+<h3 id="lossfunction">Loss Function</h3>
+
+<ul>
+<li>Categorical distribution across each channel: 256$\times$3$\times$h$\times$w-dim output.</li>
+
+<li>Discretized mixture of logistics (DMOL) over three channels.</li>
+</ul>
+
+
+</body>
+</html>

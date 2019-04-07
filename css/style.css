@@ -1,0 +1,130 @@
+body {
+  padding-top: 10em;
+  font-family: Georgia, Times, serif;
+  color:#3D3D3F;
+  background-color:#F5F5F5; 
+  margin-left:auto;
+  margin-right:auto;
+  width:90%;
+  margin-top:80px;
+  padding:0px;
+  line-height:150%;
+  font-size:85%;
+}
+h1 {
+  text-align:center;
+  margin-bottom:40px;
+  color:#3D3D3F;
+  font-size:175%;
+  font-weight: 1;
+}
+h2 {
+  font-family:Times, serif;
+  text-align:left;
+  color:#3D3D3F;
+  font-size:125%;
+  font-weight: 1;
+  text-decoration: underline;
+}
+h3 {
+  text-align:left;
+  color:#3D3D3F;
+  font-size:100%;
+  font-weight: bold;
+}
+
+p {
+  text-indent:40px;
+  text-align:justify;
+}
+
+ul li {
+  line-height: 200%;
+}
+hr {
+  border:none;
+  border-top:1px dotted #7DCE94;
+  height:1px;
+  padding-top:2px;
+  width:100%;
+}
+
+a:link {
+  color:#7DCE94;
+  text-decoration:none;
+}
+a:visited {
+  color:#4CB69F;
+  text-decoration:none;
+}
+a:hover {
+  color:#7DCE94;
+}
+
+
+.collapsible {
+  cursor: pointer;
+}
+
+address {
+  text-align: center;
+  margin-top: 2em;
+  padding-top: 2em;
+  border-top: thin dotted
+}
+
+#columns {
+	column-width: 320px;
+	column-gap: 15px;
+  width: 90%;
+	max-width: 1100px;
+	margin: 50px auto;
+}
+
+div#columns figure {
+	background: #fefefe;
+	border: 2px solid #fcfcfc;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	padding: 15px;
+	padding-bottom: 10px;
+	transition: opacity .4s ease-in-out;
+  display: inline-block;
+  column-break-inside: avoid;
+}
+
+div#columns figure img {
+	width: 100%; height: auto;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+}
+
+div#columns figure figcaption {
+  font-size: .9rem;
+	color: #444;
+  line-height: 1.5;
+}
+
+div#columns small {
+  font-size: 1rem;
+  float: right;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+div#columns small a {
+  color: #666;
+  text-decoration: none;
+  transition: .4s color;
+}
+
+div#columns:hover figure:not(:hover) {
+	opacity: 0.4;
+}
+
+@media screen and (max-width: 750px) {
+  #columns { column-gap: 0px; }
+  #columns figure { width: 100%; }
+}
+

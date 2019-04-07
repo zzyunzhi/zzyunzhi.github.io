@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> RAM </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<a href="../../index.html"><i class="fa fa-home"></i> HOME</a>
+
+<h1 id="transformer">Position Encoding in Transformer Networks</h1>
+
+<p style="text-align: center">Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin. <a href="https://arxiv.org/pdf/1706.03762.pdf">Attention Is All You Need</a>. 2017.</p> 
+
+<hr>
+<h2 id="previouswork">Previous Work</h2>
+
+<ul>
+<li>Recurrent models: the sequential processing of input symbols precludes parallelization, and runtime scales up with longer sequence lengths. </li>
+
+<li>Attention mechanisms: allows dependency without regard to distance, used with recurrence.  </li>
+
+<li>Transformer network: allows for parallelization, removing recurrence and convolution while maintaining global dependencies. </li>
+</ul>
+
+<h2 id="discussiononpositionencoding">Discussion on Position Encoding</h2>
+
+<p>Authors of the paper comment on the choice of position encoding function with "for any fixed offset k, PE(pos+k) can be represented as a linear function of PE(pos)". <a href="http://jalammar.github.io/illustrated-transformer/">Illustration</a> by Jay Alammar indicates that the transformation is linear in the sense that it is a row rotation of the encoded position vector; i.e. f(pos+k, j) = f(pos, j-delta) where delta is independent of j when k is far less than pos. 
+The following is the proof.<br><br></p>
+
+<img src="./proof.jpg" alt="proof" title="proof" width=100% height=auto/>

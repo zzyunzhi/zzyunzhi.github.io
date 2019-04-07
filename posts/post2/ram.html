@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> RAM </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<a href="../../index.html"><i class="fa fa-home"></i> HOME</a>
+
+<h1 id="ram">The Recurrent Attention Model (RAM)</h1>
+
+<p style="text-align: center">Volodymyr Mnih, Nicolas Heess, Alex Graves, Koray Kavukcuoglu. <a href="https://papers.nips.cc/paper/5542-recurrent-models-of-visual-attention.pdf">Recurrent Models of Visual Attention</a>. 2014.</p> 
+
+<hr>
+<h2 id="previouswork">Previous Work</h3>
+
+<ul>
+<li>Window classifier design based:
+
+
+<ul>
+<li>Efforts have been made to speed up computation by reducing number of windows to be evaluated. </li>
+
+<li>e.g. R-CNN, Fast R-CNN, Faster R-CNN, Region-based Fully Convolutional Network (R-FCN), Feature Pyramid Network (FPN) for object detection. </li>
+
+<li>Limited exploitation of past information. </li></ul>
+</li>
+
+<li>Saliency detection based:
+
+
+<ul>
+<li>Salient image regions are identified based on and often restricted to low-level features. </li>
+
+<li>Does not integrate information across fixations. </li>
+
+<li>Typically ignores semantic content and task demands. </li></ul>
+</li>
+
+<li>Sequential decision view based:
+
+
+<ul>
+<li>Decide next attention based on previous fixations of the image. </li></ul>
+</li>
+</ul>
+
+<h2 id="overview">Overview</h3>
+
+<ul>
+<li>Adaptively selects a sequence of regions and process regions with high resolution. </li>
+
+<li>End-to-end optimization, employing reinforcement learning methods to learn task-specific policies. </li>
+</ul>
+
+<h2 id="model">Model</h3>
+<br>
+<img src="./model.jpg" alt="model" title="model" width=100% height=auto/>
+<img src="./training.jpg" alt="training" title="training" width=100% height=auto/>
+
+</body>
+</html>
