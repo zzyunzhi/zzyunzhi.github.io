@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Flow Model </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+
+<body>
+<a href="../../index.html"><i class="fa fa-home"></i> HOME</a>
+
+  <h1>Flow Model</h1>
+  <hr>
+
+  <p>Goal: find density model \(p_\theta(\mathbf{x})\).</p>
+  <p>Train with maximum likelihood: minimize \(\mathbb{E}_{\mathbf{x}}\left[-\log p_\theta(\mathbf{x})\right]\).</p>
+  <p>By inverse-transform sampling, 
+    \(\mathbf{z}\) ~ Uniform\(([0, 1])\), \(\mathbf{x} = f_\theta^{-1}(\mathbf{z})\) gives \(\mathbf{x}\) ~ \(p_\theta(\mathbf{x})\) 
+    where \(f_\theta(x) = \int_{-\infty}^{x} p_\theta(t)dt\) is the CDF of data distribution, called a flow.</p>
+  <p>More generally, a flow from \(\mathbf{x}\) to \(\mathbf{z}\) is an invertible, differentiable function from \(\mathbf{x}\) to \(\mathbf{z}\). 
+    A flow \(f_\theta\) defines a distribution over \(\mathbf{x}\) via sampling with base distribution \(p(\mathbf{z})\):
+  <div style="text-align: center">\(\mathbf{z}\) ~ \(p(\mathbf{z})\), \(\mathbf{x} = f_\theta^{-1}(\mathbf{z})\)</div>
+  <p>Fitting \(p_\theta(\mathbf{x})\) is equivalent to fitting the flow, and \(p_\theta(\mathbf{x})\) is the density of \(\mathbf{x}\) under the sampling process above. 
+    Training with maximum likelihood becomes minimizing
+    $$\mathbb{E}_{\mathbf{x}}\left[-\log p\left(f_{\theta}(\mathbf{x})\right)-\log \operatorname{det}\left|\frac{\partial f_{\theta}(\mathbf{x})}{\partial \mathbf{x}}\right|\right]$$</p>
+</p>
+</body>
+</html>
