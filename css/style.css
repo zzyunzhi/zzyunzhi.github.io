@@ -1,7 +1,7 @@
 body {
   padding-top: 10em;
   font-family: Georgia, Times, serif;
-  color:#3D3D3F;
+  color:#000000;
   background-color:#FFFFFF; 
   margin-left:auto;
   margin-right:auto;
@@ -12,30 +12,41 @@ body {
   line-height:150%;
   font-size:85%;
 }
+section-heading {
+  font-size: 100%;
+  font-weight: bold;
+  border-bottom: 0.5px dotted black;
+}
+name {
+  font-size: 125%;
+  font-weight: bold;
+  text-align: center;
+}
+
 h1 {
   text-align:center;
   margin-bottom:40px;
-  color:#3D3D3F;
+  color:#000000;
   font-size:175%;
   font-weight: 1;
 }
 h2 {
   font-family:Times, serif;
   text-align:left;
-  color:#3D3D3F;
+  color:#000000;
   font-size:125%;
   font-weight: 1;
   text-decoration: underline;
 }
 h3 {
   text-align:left;
-  color:#3D3D3F;
+  color:#000000;
   font-size:100%;
   font-weight: bold;
 }
 
 p {
-  text-indent:40px;
+  text-indent:0px;
   text-align:justify;
 }
 
@@ -51,15 +62,15 @@ hr {
 }
 
 a:link {
-  color:#7DCE94;
+  color:#224b8d;
   text-decoration:none;
 }
 a:visited {
-  color:#4CB69F;
+  color:#224b8d;
   text-decoration:none;
 }
 a:hover {
-  color:#7DCE94;
+  color:#f09228;
 }
 
 
@@ -127,5 +138,9 @@ div#columns:hover figure:not(:hover) {
 @media screen and (max-width: 750px) {
   #columns { column-gap: 0px; }
   #columns figure { width: 100%; }
+}
+
+.paper-img {
+width:160px;height:160px;position:center;left:0%;top:50%;overflow:hidden
 }
 
