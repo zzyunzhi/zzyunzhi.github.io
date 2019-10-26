@@ -1,8 +1,7 @@
 body {
-  padding-top: 10em;
-  font-family: Georgia, Times, serif;
-  color:#000000;
-  background-color:#FFFFFF; 
+  padding-top:10em;
+  font-family:Georgia, Times, serif;
+  background: white; 
   margin-left:auto;
   margin-right:auto;
   width:90%;
@@ -17,6 +16,7 @@ section-heading {
   font-weight: bold;
   border-bottom: 0.5px dotted black;
 }
+
 name {
   font-size: 125%;
   font-weight: bold;
