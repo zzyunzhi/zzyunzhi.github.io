@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Yunzhi Zhang</title>
-    <meta name="description" content="Personal Web Page">
-    <meta name="google-site-cerification" content="google-site-verification=y3HfpJZKZzHJRmB8sdQ0SHejcOgKu-gTkRwnn62TKF0">
+    <meta name="author" content="Yunhi Zhang">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,29 +14,48 @@
     <h1>Yunzhi Zhang</h1>
 
     <section>
-        <p> I am an undergraduate student at UC Berkeley studying computer science and pure mathematics.
-            I am currently working with Professor <a href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>
-            as an undergraduate researcher in <a href="https://bair.berkeley.edu/">Berkeley Artificial Intelligence Research (BAIR)</a> Lab. 
+        <p> I am currently working on autonomous robotics at <a href="https://covariant.ai/">Covariant AI</a>.
+            I received B.A. in computer science and pure mathematics from UC Berkeley, where
+            I am grateful to be advised by Professor <a href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>
+            on Reinforecement Learning and robotics. Starting Fall 2021, I will be pursuing my Ph.D. in CS at Stanford University.
         </p>
-        <p>I am interested in solving decision making problems with learning-based methods and their applications in real robotics settings.
-        </p>
-        <p>
         <div style="text-align:center">
-        <a href="mailto: yunzhi@berkeley.edu">Email</a>&nbsp; &nbsp; &middot; &nbsp; &nbsp;
-        <a href="https://github.com/zzyunzhi">Github</a>&nbsp; &nbsp; &middot; &nbsp; &nbsp;
+        <a href="mailto: yunzhi@berkeley.edu">Email</a> &nbsp/&nbsp
+        <a href="https://github.com/zzyunzhi">Github</a>&nbsp/&nbsp
         <a href="https://www.linkedin.com/in/yunzhi-zhang-162a49149/">LinkedIn</a>
     </div>
         <br>
         <br>
-        </p>
     </section>
-    
+
     <section>
         <header><b>Research</b></header>
-        
 
         <div style="width:100%; border:0">
             <table>
+                <tr>
+                    <td style="padding:20px;width:25%;vertical-align:top">
+                        <div class="paper-img"><img src='img/MazeA-v0-goal-dist.gif' alt="vds"></div>
+                    </td>
+                    <td style="padding:5px;width:75%;vertical-align:middle">
+                        <b>Automatic Curriculum Learning through Value Disagreement</b>
+                        <br>
+                        Yunzhi Zhang*, Pieter Abbeel, Lerrel Pinto
+                        <br>
+                        <a href="https://arxiv.org/abs/2006.09641">[arXiv]</a>
+                        <a href="https://sites.google.com/berkeley.edu/vds/">[Webpage]</a>
+                        <a href="https://github.com/zzyunzhi/vds">[Code]</a>
+                        <br>
+                        <em>Preprint.</em>
+                        <br>
+
+                        <p>
+                            For goal-conditioned RL, we introduce a goal sampling strategy that prioritizes goals that maximize
+                            the epistemic uncertainty of a learned Q-value function.
+                            This simple technique fascilitates learning by providing a strong learning signal even with sparse-reward.
+                        </p>
+                    </td>
+                </tr>
                 <tr>
                     <td style="padding:20px;width:25%;vertical-align:top">
                         <div class="paper-img"><img src='img/metrpo-stack-asynch.gif' alt="asynch-mb"></div>
@@ -54,8 +72,8 @@
                         <em>CoRL, 2019 (<b>Spotlight</b>). NeurIPS Deep RL Workshop, 2019.</em>
                         <br>
 
-                        <p>An asynchronous framework for general model-based reinforcement learning methods which parallelizes data-collection and model training.
-                            The proposed framework improves time and sample efficiency, and further encourages exploration and reduces policy overfitting.</p>
+                        <p>We propose an asynchronous framework for general model-based reinforcement learning methods which parallelizes data-collection and model training.
+                            Apart from improving wall-clock-time efficiency, the asynchronous setting encourages exploration and reduces policy overfitting.</p>
                     </td>
                 </tr>
             </table>
@@ -66,9 +84,10 @@
 
     <section>
         <header><b>Teaching</b></header>
-            <p> I am a student instructor for <a href="https://cs170.org">CS170</a>: <i>Efficient Algorithms and Intractable Problems</i> and 
-                <a href="http://www.eecs70.org/">CS70</a>: <i>Discrete Mathematics and Probability Theory</i>. 
-                <!--<a href="./notes.html">Here</a> are some of my teaching/studying notes. </p>-->
+            <ul>
+                <li>Teaching Assistant, <a href="https://cs170.org">CS170</a>: <i>Efficient Algorithms and Intractable Problems</i>, Fall 2019</li>
+                <li>Teaching Assistant, <a href="http://www.eecs70.org/">CS70</a>: <i>Discrete Mathematics and Probability Theory</i>, Spring 2018</li>
+            </ul>
             <br>
             <br>
     </section>
@@ -81,43 +100,17 @@
         </ul>
     </section>
 
-    <!--
-    <section>
-        <section-heading>Writings</section-heading>
-        <ul>
-            <li><a href="./posts/post6/mbrl.pdf">Model-Based Reinforcement Learning Methods</a></li>
-            <li><a href="./posts/post5/flow.html">Flow Model</a></li>
-            <li><a href="./posts/post4/imgtf.html">Image Transformer</a></li>
-            <li><a href="./posts/post3/transformer.html">Position Encoding in Transformer Network</a></li>
-            <li><a href="./posts/post2/ram.html">The Recurrent Attention Model</a></li>
-            <li><a href="./posts/post1/math1.pdf">Water Volume in Tilted Cup</a></li>
-        </ul>
-    </section>
-
-    <section>
-        <section-heading>Others</section-heading>
-        <p> Check my art work <a href="./arts.html">here</a>.</p>
-    </section>
-    -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:right;font-size:small;">
+                Design and source code from <a href="https://jonbarron.info/">Jon Barron's website</a>.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
 
 </body>
-
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
 
 </html>
