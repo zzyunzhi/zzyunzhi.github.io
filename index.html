@@ -37,8 +37,7 @@
             <a href="https://scholar.google.com/citations?user=BzWl0r0AAAAJ&hl=en">Scholar</a> &nbsp/&nbsp
             <a href="https://github.com/zzyunzhi">Github</a> &nbsp/&nbsp
             <a href="mailto: zzyunzhi@gmail.edu">Email</a> &nbsp/&nbsp
-            <a href="https://www.linkedin.com/in/yunzhi-zhang-162a49149/">LinkedIn</a> 
-<!--            <a href="https://twitter.com/zhang_yunzhi">Twitter</a>-->
+            <a href="https://twitter.com/zhang_yunzhi">Twitter</a>
         </div>
         <br>
         <br>
@@ -49,6 +48,32 @@
 
         <div>
             <table>
+                <tr>
+                    <td style="padding:20px;width:25%;vertical-align:top">
+                        <div class="paper-img"><img src='img/ucf-class-conditional.gif' alt="videogpt"></div>
+                    </td>
+                    <td style="padding:5px;width:75%;vertical-align:middle">
+                        <b>VideoGPT: Video Generation using VQ-VAE and Transformers</b>
+                        <br>
+                        <a href="https://wilson1yan.github.io/">Wilson Yan</a>*, Yunzhi Zhang*,
+                        <a href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>,
+                        <a href="https://people.eecs.berkeley.edu/~aravind/">Aravind Srinivas</a>
+                        <br>
+                        <a href="https://arxiv.org/abs/2104.10157">[arXiv]</a>
+                        <a href="https://wilson1yan.github.io/videogpt/index.html">[Webpage]</a>
+                        <a href="https://github.com/wilson1yan/VideoGPT">[Code]</a>
+                        <br>
+                        <em>Preprint.</em>
+                        <br>
+
+                        <p>
+                            We present VideoGPT which adapts VQ-VAE for compressing videos into a
+                            discrete latent space, and a GPT-like autoregressive model for latent prior distribution.
+                            Despite its simplicity, our architecture is able to generate samples competitive with
+                            state-of-the-art GANs for video generation on BAIR Robot dataset.
+                        </p>
+                    </td>
+                </tr>
                 <tr>
                     <td style="padding:20px;width:25%;vertical-align:top">
                         <div class="paper-img"><img src='img/MazeA-v0-goal-dist.gif' alt="vds"></div>
@@ -67,9 +92,9 @@
                         <br>
 
                         <p>
-                            We introduce a goal sampling strategy for goal-conditioned robotics tasks,
-                            where goals lying on the learning frontier are more likely to be selected for training.
-                            Such goals are identified as goals with high Q-function uncertainty.
+                            We introduce a goal sampling strategy for goal-conditioned tasks,
+                            such that goals lying on the learning frontier are more likely to be selected for training.
+                            These goals are identified as goals with high Q-function uncertainty.
                             This simple technique is able to provide a strong learning signal even
                             in sparse reward environments.
                         </p>
